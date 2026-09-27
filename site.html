@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="mn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чингис Соос Коллеж - Мэргэжилтэй ирээдүй таны хүлээж байна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1f36;
+            color: #ffffff;
+        }
+        .custom-gradient {
+            background: linear-gradient(135deg, #09192c 0%, #102e4e 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(180deg, #132d4e 0%, #0d223a 100%);
+        }
+        .hero-btn {
+            background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
+            transition: all 0.3s ease;
+        }
+        .hero-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-[#0b1f36] text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#0d223a]/90 backdrop-blur-md border-b border-blue-900/40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Title -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400 shadow-md">
+                    <i class="fa-solid fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-wider text-white uppercase">ЧИНГИС СООС КОЛЛЕЖ</h1>
+                    <p class="text-xs text-blue-300 font-medium">Мэргэжилтэй ирээдүйг таны хүлээж байна</p>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#home" class="text-white hover:text-blue-400 transition">Нүүр</a>
+                <a href="#about" class="text-gray-300 hover:text-blue-400 transition">Бидний тухай</a>
+                <a href="#programs" class="text-gray-300 hover:text-blue-400 transition">Мэргэжлүүд</a>
+                <a href="#admission" class="text-gray-300 hover:text-blue-400 transition">Элсэлт</a>
+                <a href="#student-life" class="text-gray-300 hover:text-blue-400 transition">Оюутны булан</a>
+                <a href="#news" class="text-gray-300 hover:text-blue-400 transition">Мэдээ, Мэдээлэл</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition">Холбоо барих</a>
+            </nav>
+
+            <!-- Search bar & Mobile menu toggle -->
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden sm:block">
+                    <input type="text" placeholder="Хайх..." class="bg-[#09192c] border border-blue-900/60 rounded-full px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-blue-500 w-44 md:w-56 pl-9">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400 text-xs"></i>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0a1b2e] border-b border-blue-900 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-white hover:text-blue-400 py-1">Нүүр</a>
+            <a href="#about" class="block text-gray-300 hover:text-blue-400 py-1">Бидний тухай</a>
+            <a href="#programs" class="block text-gray-300 hover:text-blue-400 py-1">Мэргэжлүүд</a>
+            <a href="#admission" class="block text-gray-300 hover:text-blue-400 py-1">Элсэлт</a>
+            <a href="#student-life" class="block text-gray-300 hover:text-blue-400 py-1">Оюутны булан</a>
+            <a href="#news" class="block text-gray-300 hover:text-blue-400 py-1">Мэдээ, Мэдээлэл</a>
+            <a href="#contact" class="block text-gray-300 hover:text-blue-400 py-1">Холбоо барих</a>
+            <div class="pt-2">
+                <input type="text" placeholder="Хайх..." class="w-full bg-[#09192c] border border-blue-900/60 rounded-full px-4 py-2 text-sm text-gray-200 focus:outline-none">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative custom-gradient py-12 lg:py-16 overflow-hidden border-b border-blue-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left Info -->
+            <div class="lg:col-span-7 space-y-6 z-10">
+                <div class="inline-block bg-blue-600/30 border border-blue-400/30 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    Мэргэжилтэй ирээдүй
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white">
+                    ЧИНГИС СООС КОЛЛЕЖ
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Бид таныг мэргэжилтэй, чадварлаг, амжилттай ирээдүйг хөтлөх боловсролыг олгоно. Орчин үеийн дэвшилтэт хөтөлбөрөөр суралцаарай.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#admission" class="hero-btn text-white font-semibold px-6 py-3 rounded-full shadow-lg flex items-center space-x-2 text-sm">
+                        <span>Элсэлтээ хийх</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#programs" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-full transition flex items-center space-x-2 text-sm">
+                        <span>Мэргэжлүүд</span>
+                        <i class="fa-solid fa-graduation-cap text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Icons Row -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-blue-900/60">
+                    <div class="flex items-center space-x-3 bg-[#0d223a]/60 p-3 rounded-xl border border-blue-900/40">
+                        <div class="text-blue-400 text-xl"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <span class="text-xs font-medium text-gray-200">Чадварлаг багш нар</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-[#0d223a]/60 p-3 rounded-xl border border-blue-900/40">
+                        <div class="text-blue-400 text-xl"><i class="fa-solid fa-building-columns"></i></div>
+                        <span class="text-xs font-medium text-gray-200">Орчин үеийн сургууль</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-[#0d223a]/60 p-3 rounded-xl border border-blue-900/40">
+                        <div class="text-blue-400 text-xl"><i class="fa-solid fa-computer"></i></div>
+                        <span class="text-xs font-medium text-gray-200">IT лаборатори (48 компьютер)</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-[#0d223a]/60 p-3 rounded-xl border border-blue-900/40">
+                        <div class="text-blue-400 text-xl"><i class="fa-solid fa-trophy"></i></div>
+                        <span class="text-xs font-medium text-gray-200">Спорт заал</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image Banner -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-500/40 group">
+                    <img src="https://placehold.co/600x400/0f2b4c/ffffff?text=Chingis+Soos+College+Building" alt="College Building" class="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0b1f36] via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-right">
+                        <p class="text-blue-400 font-bold text-sm sm:text-base italic">Таны ирээдүй ЭНДЭЭС эхэлнэ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section ("Мэргэжлүүд") -->
+    <section id="programs" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <span class="text-blue-400 text-xs font-semibold uppercase tracking-wider">Мэргэжлүүд</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Бидний санал болгож буй мэргэжлүүд</h2>
+            </div>
+            <a href="#programs" class="hidden sm:flex items-center space-x-2 text-blue-400 hover:text-blue-300 text-sm font-semibold transition">
+                <span>Бүх мэргэжлийг үзэх</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Program 1 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=IT+Technology" alt="IT" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Мэдээлэл технологи</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Веб хөгжүүлэлт, системээс админ, сүлжээний инженерчлэл.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=Auto+Mechanic" alt="Auto" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Авто механик</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Автомашины засвар үйлчилгээ, электрон оношилгоо.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=Chef+Culinary" alt="Chef" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Тогооч</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Зоогчийн үйлчилгээ, хоол үйлдвэрлэлийн технологи.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=Construction+Tech" alt="Construction" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-hard-hat"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Барилгын техник</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Барилга, засвар үйлчилгээ, инженерийн нарийн ажил.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+
+            <!-- Program 5 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=Computer+Lab" alt="Computer" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Компьютерийн техник</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">48 компьютертай орчин үеийн тусгай IT лаборатори.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+
+            <!-- Program 6 -->
+            <div class="card-gradient rounded-2xl overflow-hidden border border-blue-900/50 shadow-lg hover:border-blue-500/50 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://placehold.co/400x250/14365d/ffffff?text=Other+Majors" alt="Others" class="w-full h-full object-cover">
+                        <div class="absolute bottom-3 left-3 bg-blue-600/90 text-white p-2 rounded-lg text-xs font-bold">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-lg text-white">Бусад мэргэжлүүд</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Тогтвортой ирээдүйн төлөө олон төрлийн мэргэжлийн сонголт.</p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-2 border-t border-blue-900/30 flex justify-between items-center">
+                    <span class="text-xs text-blue-400 font-medium">Дэлгэрэнгүй</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Grid: Why Choose Us, News & Student Life -->
+    <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Why Choose Us Banner (Left) -->
+        <div class="lg:col-span-4 bg-gradient-to-br from-blue-700 to-blue-900 rounded-3xl p-6 shadow-xl flex flex-col justify-between border border-blue-500/40">
+            <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-white mb-6">Яагаад Чингис Соос Коллеж?</h2>
+                <ul class="space-y-4 text-sm font-medium text-gray-100">
+                    <li class="flex items-center space-x-3">
+                        <span class="bg-blue-500/50 p-1.5 rounded-full text-white text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Чадварлаг багш нар</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="bg-blue-500/50 p-1.5 rounded-full text-white text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Орчин үеийн сургалтын орчин</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="bg-blue-500/50 p-1.5 rounded-full text-white text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Ажлын байранд зуучлах</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="bg-blue-500/50 p-1.5 rounded-full text-white text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Оюутны хөгжлийн хөтөлбөр</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-8">
+                <button onclick="openModal('Дэлгэрэнгүй мэдээлэл', 'Чингис Соос Коллеж нь оюутан бүрт чанартай боловсрол, найдвартай ажлын байр, олон улсын стандарт бүхий хөтөлбөрийг санал болгодог.')" class="bg-white text-blue-900 font-semibold px-6 py-2.5 rounded-full text-xs shadow-md hover:bg-gray-100 transition">
+                    Дэлгэрэнгүй
+                </button>
+            </div>
+        </div>
+
+        <!-- News Section (Middle) -->
+        <div id="news" class="lg:col-span-4 card-gradient rounded-3xl p-6 shadow-xl border border-blue-900/50 flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-white">Мэдээ, Мэдээлэл</h2>
+                    <a href="#news" class="text-xs text-blue-400 hover:text-blue-300 font-medium">Бүх мэдээг үзэх</a>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer" onclick="openModal('Сургуулийн шинэ элсэлтийн бүртгэл эхэллээ', '2025-09-10: Чингис Соос Коллежийн 2025-2026 оны хичээлийн шинэ жилийн элсэлтийн бүртгэл албан ёсоор эхэллээ. Та манай мэргэжлүүдээс сонгон суралцах боломжтой.')">
+                        <div class="flex space-x-3 items-center">
+                            <img src="https://placehold.co/80x60/112e4d/ffffff?text=News" class="w-16 h-12 rounded object-cover">
+                            <div>
+                                <span class="text-[10px] text-blue-400 font-semibold">2025-09-10 /</span>
+                                <h4 class="text-xs font-bold text-white line-clamp-2">Сургуулийн шинэ элсэлтийн бүртгэл эхэллээ</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer" onclick="openModal('Спортын тэмцээн - 2025', '2025-09-05: Оюутнуудын дунд спортын олон төрөлт тэмцээн амжилттай зохион байгуулагдаж өндөрлөлөө.')">
+                        <div class="flex space-x-3 items-center">
+                            <img src="https://placehold.co/80x60/112e4d/ffffff?text=Sport" class="w-16 h-12 rounded object-cover">
+                            <div>
+                                <span class="text-[10px] text-blue-400 font-semibold">2025-09-05 /</span>
+                                <h4 class="text-xs font-bold text-white line-clamp-2">Спортын тэмцээн - 2025</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer" onclick="openModal('IT клубийн шинэ элсэлт зарлагдлаа', '2025-08-28: Програмчлал, веб хөгжүүлэл сонирхогч оюутнуудад зориулсан IT клубийн шинэ гишүүдийн элсэлт эхэллээ.')">
+                        <div class="flex space-x-3 items-center">
+                            <img src="https://placehold.co/80x60/112e4d/ffffff?text=IT+Club" class="w-16 h-12 rounded object-cover">
+                            <div>
+                                <span class="text-[10px] text-blue-400 font-semibold">2025-08-28 /</span>
+                                <h4 class="text-xs font-bold text-white line-clamp-2">IT клубийн шинэ элсэлт зарлагдлаа</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Life Section (Right) -->
+        <div id="student-life" class="lg:col-span-4 card-gradient rounded-3xl p-6 shadow-xl border border-blue-900/50 flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-white">Оюутны амьдрал</h2>
+                    <a href="#student-life" class="text-xs text-blue-400 hover:text-blue-300 font-medium">Бүхнийг үзэх</a>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div onclick="openModal('Сургуулийн дүрэм, журам', 'Оюутан суралцагчдын дагаж мөрдөх дотоод журам болон сургалтын үйл ажиллагааны заавар.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-book text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">Дүрэм, журам</h4>
+                    </div>
+                    <div onclick="openModal('Хичээлийн хуваарь', '2025-2026 оны хичээлийн жилийн хаврын улирлын хичээлийн хуваарь.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-calendar text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">Хичээлийн хуваарь</h4>
+                    </div>
+                    <div onclick="openModal('Оюутны зөвлөл', 'Оюутнуудын эрх ашгийг хамгаалах, чөлөөт цагийг үр дүнтэй өнгөрүүлэх зөвлөл.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-users text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">Оюутны зөвлөл</h4>
+                    </div>
+                    <div onclick="openModal('Дугуйлан', 'Урлаг, спортын төрөлжсөн дугуйлангууд.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-music text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">Дугуйлан</h4>
+                    </div>
+                    <div onclick="openModal('PC/IT клуб', 'Мэдээллийн технологи сонирхогчдын нэгдэл.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-laptop-code text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">PC/IT клуб</h4>
+                    </div>
+                    <div onclick="openModal('Спорт, арга хэмжээ', 'Коллежийн хэмжээний спортын болон урлагийн арга хэмжээнүүд.')" class="bg-[#09192c]/80 p-3 rounded-xl border border-blue-900/40 hover:border-blue-500/40 transition cursor-pointer text-center">
+                        <i class="fa-solid fa-medal text-blue-400 text-lg mb-1"></i>
+                        <h4 class="text-[11px] font-semibold text-gray-200">Спорт, арга хэмжээ</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Form Section ("Элсэлт") -->
+    <section id="admission" class="py-12 bg-[#091726] border-t border-blue-900/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <span class="text-blue-400 text-xs font-semibold uppercase tracking-wider">Элсэлтийн бүртгэл</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Онлайн элсэлтийн бүртгэл</h2>
+                <p class="text-gray-300 text-xs mt-1">Та доорх формоор мэдээллээ явуулж бүртгүүлээрэй.</p>
+            </div>
+            <form onsubmit="handleAdmissionSubmit(event)" class="card-gradient p-8 rounded-3xl border border-blue-900/60 shadow-2xl grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-2">Овог, нэр</label>
+                    <input type="text" required placeholder="Таны нэр" class="w-full bg-[#0b1f36] border border-blue-900/60 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-2">Утасны дугаар</label>
+                    <input type="tel" required placeholder="+976 9911..." class="w-full bg-[#0b1f36] border border-blue-900/60 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-2">И-мэйл хаяг</label>
+                    <input type="email" required placeholder="name@example.com" class="w-full bg-[#0b1f36] border border-blue-900/60 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-2">Сонгох мэргэжил</label>
+                    <select class="w-full bg-[#0b1f36] border border-blue-900/60 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                        <option>Мэдээлэл технологи</option>
+                        <option>Авто механик</option>
+                        <option>Тогооч</option>
+                        <option>Барилгын техник</option>
+                        <option>Компьютерийн техник</option>
+                    </select>
+                </div>
+                <div class="sm:col-span-2 pt-2">
+                    <button type="submit" class="w-full hero-btn text-white font-semibold py-3 rounded-xl shadow-lg text-sm">
+                        Бүртгүүлэх илгээх
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-[#071321] border-t border-blue-900/60 pt-10 pb-6 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-blue-900/40">
+            <!-- Address -->
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Хаяг</h5>
+                    <p class="text-xs text-gray-400">Улаанбаатар, Баянзүрх дүүрэг, 21-р хороолол</p>
+                </div>
+            </div>
+            <!-- Phone -->
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-phone text-blue-400 mt-1"></i>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Утас</h5>
+                    <p class="text-xs text-gray-400">+976 7000 1234, +976 9911 2233</p>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-envelope text-blue-400 mt-1"></i>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-1">И-мэйл</h5>
+                    <p class="text-xs text-gray-400">info@chingissoos.edu.mn</p>
+                </div>
+            </div>
+            <!-- Map Link -->
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-map text-blue-400 mt-1"></i>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Байршил</h5>
+                    <a href="https://maps.google.com" target="_blank" class="text-xs text-blue-400 hover:underline flex items-center space-x-1">
+                        <span>Google Map</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social & Copyright Bottom -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 space-y-4 sm:space-y-0">
+            <div class="flex space-x-4 text-lg">
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="italic text-blue-300">Мэргэжилтэй ирээдүй таны хүлээж байна...</p>
+            <p>© 2026 Чингис Соос Коллеж. Бүх эрх хуулиар хамгаалагдсан.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Modal Box -->
+    <div id="custom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden">
+        <div class="card-gradient border border-blue-500/50 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <h3 id="modal-title" class="text-lg font-bold text-white mb-2">Гарчиг</h3>
+            <p id="modal-desc" class="text-gray-300 text-xs leading-relaxed mb-6">Дэлгэрэнгүй тайлбар...</p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="hero-btn text-white px-5 py-2 rounded-xl text-xs font-semibold">Хаах</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal functions (replacing alert/confirm)
+        function openModal(title, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+
+        function handleAdmissionSubmit(e) {
+            e.preventDefault();
+            openModal('Амжилттай бүртгэгдлээ!', 'Таны онлайн элсэлтийн хүсэлтийг хүлээн авлаа. Манай ажилтан тун удаан тань руу холбогдох болно.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
